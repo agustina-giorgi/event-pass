@@ -88,7 +88,7 @@ p{
     border-radius: 12px;
     padding: 24px;
     /* margin: 24px; */
-    row-gap: 8px;
+    row-gap: 16px;
     box-shadow: 0 2px 4px rgba(172, 172, 172, 0.25);
 }
 
@@ -102,6 +102,14 @@ p{
     margin-bottom: 16px;
     color: #fafafa;
     font-weight: 100;
+}
+
+.event-info{
+    margin: 16px 0;
+}
+
+.event-details{
+    margin: 0;
 }
 
 .btn{
