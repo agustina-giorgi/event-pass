@@ -8,7 +8,7 @@ header {
     /* justify-content: space-between; */
 }
 
-#logo{
+/* #logo{
     text-align: left;
     font-size: 24px;
     text-transform: none;
@@ -17,16 +17,16 @@ header {
     line-height: 50px;
     color: #9DFF00;
     font-weight: 600;
-}
+} */
 
 header nav{
-    background-color: #151515;
+    background-color: #151515; 
     /* height: 56px;
-    width: 100%; */
+    width: 100%;
     box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.25);
     /* top: 0; */
-    /* position: fixed; */
-    /* display: flexbox; */
+    /* position: fixed;
+    display: flexbox; */
 }
 
 header nav ul{
@@ -57,15 +57,20 @@ header nav ul li a{
 body{
     background-color: #151515;
     /* width: 100%; */
-    margin: 0;
-    /* padding: 0;    */
+    /* margin: 0;
+    padding: 0;    */
 }
 
 body main{
     /* text-align: left; */
     color: #fafafa;
+    margin: 0;
     /* padding: 44px 0 0 0;    */
-    /* min-height: 100vh; */
+    min-height: 100vh;
+}
+
+.main{
+    background-color: #151515;
 }
 
 .main-content{
@@ -136,11 +141,21 @@ h1{
     text-transform: uppercase;
 }
 
+.btn:hover{
+    background-color: #bdf85e;
+    color: #151515;
+}
+
 .btn-link{
     color: #9DFF00;
     font-size: 16px;
     font-weight: 600;
     margin-left: 8px;
+    line-height: 16px;
+}
+
+.btn-link:hover{
+    color: #bdf85e;
 }
 
 .faq-container{
@@ -158,8 +173,8 @@ h1{
 }
 
 .faq-question{
-    /* padding: 0;
-    margin: 0; */
+    padding: 0;
+    margin: 0;
 }
 
 .faq-question h4{
@@ -167,6 +182,7 @@ h1{
     padding: 0;
     font-weight: 600;
     color: #fafafa;
+    font-size: 16px;
 }
 
 .faq-answer{
@@ -176,7 +192,6 @@ h1{
 
 #redirect-contact{
     display: flex;
-    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -185,6 +200,7 @@ h1{
     /* padding-right: 8px; */
     font-weight: 300;
     font-size: 16px;
+    line-height: 16px;
 }
 
 
@@ -246,11 +262,12 @@ footer{
 /* estilos de grid */
 
 .grid-container{
+    background-color: #151515;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
-    grid-template-rows: repeat(3, auto);
-    align-content: space-evenly;
+    row-gap: 24px;
+    grid-template-rows: repeat(3 auto);
     grid-template-areas:
         "header"
         "main"
@@ -274,3 +291,44 @@ footer{
     grid-column: 1 / 13;
     grid-row: 3 / 3;
 }
+
+
+/* estilos bootstrap */
+
+.bg-nav{
+    background-color: #151515;
+    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.25);
+}
+
+.logo-txt{
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-txt:hover{
+    color: #bdf85e;
+}
+
+.menu-link{
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+.menu-link:hover{
+    color: #bdf85e;
+    font-weight: 800;
+}
+
+.menu-link-active{
+    color: #9DFF00;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu-link-active:hover{
+    color: #9DFF00;
+    font-weight: 800;  
+}
+
+
