@@ -4,40 +4,10 @@
 
 /* estilos de header */
 
-header {
-    /* justify-content: space-between; */
-}
-
-/* #logo{
-    text-align: left;
-    font-size: 24px;
-    text-transform: none;
-    display: inline;
-    margin-left: 24px;   
-    line-height: 50px;
-    color: #9DFF00;
-    font-weight: 600;
-} */
-
-header nav{
-    background-color: #151515; 
-    /* height: 56px;
-    width: 100%;
-    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.25);
-    /* top: 0; */
-    /* position: fixed;
-    display: flexbox; */
-}
-
-header nav ul{
-    list-style: none;
-    float: right;
-    /* margin-right: 24px; */
-}
-
 header nav ul li{
-    display: inline-block;
+    display: inline-flex;
     margin: 0 16px;
+    align-items: space-between;
 
 }
 
@@ -73,26 +43,30 @@ body main{
     background-color: #151515;
 }
 
-.main-content{
-    /* margin: 24px 32px 24px 32px; */
-}
-
-h1{
+.title{
     text-transform: uppercase;
     color: #fafafa;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0;
+}
+
+p{
+    color: #fafafa;
+    font-size: 16px;
 }
 
 .banner-img{
-    height: 420px;
+    height: 400px;
     width: 100%;
     margin-top: 0;
 }
 
 #search-input{
-    width: 45%;
+    width: 50%;
     height: 44px;
     padding: 0 16px;
-    margin-bottom: 16px;
+    margin: 16px 0;
     border-radius: 12px;
     outline: none;
     border: none;
@@ -101,25 +75,25 @@ h1{
 }
 
 .card-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
+    column-gap: 24px;
+    row-gap: 24px;
+    margin: 24px 0;
     justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 .card{
     background-color: rgb(50, 50, 50);
-    width: 25%;
     border-radius: 12px;
     padding: 24px;
-    margin: 24px;
-    overflow: hidden;
+    /* margin: 24px; */
+    row-gap: 8px;
     box-shadow: 0 2px 4px rgba(172, 172, 172, 0.25);
 }
 
 .card-img{
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
     border-radius: 12px;
 }
@@ -127,6 +101,7 @@ h1{
 .card-content h4{
     margin-bottom: 16px;
     color: #fafafa;
+    font-weight: 100;
 }
 
 .btn{
@@ -264,9 +239,10 @@ footer{
 .grid-container{
     background-color: #151515;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
-    row-gap: 24px;
+    row-gap: 32px;
     grid-template-rows: repeat(3 auto);
     grid-template-areas:
         "header"
@@ -330,5 +306,8 @@ footer{
     color: #9DFF00;
     font-weight: 800;  
 }
+
+
+
 
 
