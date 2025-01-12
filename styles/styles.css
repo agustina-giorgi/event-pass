@@ -226,14 +226,19 @@ label{
 /* estilos de footer */
 
 footer{
-    text-align: center;
-    color: #fafafa;
-    font-size: 14px;
     background-color: black;
     width: 100%;
     position: static;
     bottom: 0;  
-    padding: 4px;
+    padding-top: 16px;
+}
+
+.txt-footer{
+    font-weight: 300;
+    font-size: 14px;
+    color: #fafafa;
+    text-align: center;
+    line-height: 14px;
 }
 
 /* estilos de grid */
