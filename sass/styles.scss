@@ -3,32 +3,32 @@
 @import "utilidades/mixin";
 
 /* estilos de header */
+
 header {
     nav {
-      ul {
-        li {
-          display: inline-flex;
-          margin: 0 16px;
-          align-items: space-between;
-  
-          a {
-            text-decoration: none;
-            color: $txt-color; 
-            font-size: 16px;
-  
-            &.active {
-              color: $accent-color; 
-              font-weight: bold;
-            }
-          }
-        }
-      }
+      @include nav;
     }
   }
+  
+  .logo-txt{
+    @include logo;
+  }
+  
+  .menu-link{
+    @include menu-links;
+  }
+  
+  .menu-link-active{
+      @include menu-links;
+      color: $accent-color;
+      font-weight: 600;
+  }
 
-  /* estilos de main */
+
+/* estilos de main */
+
   body {
-    background-color: $background-color;
+    @include main;
   }
   
   body main {
@@ -37,23 +37,13 @@ header {
     min-height: 100vh;
   }
   
-  .main {
-    background-color: $background-color;
-  }
   
   .title {
-    text-transform: uppercase;
-    color: $txt-color;
-    font-weight: 800;
-    font-size: 32px;
-    padding-bottom: 16px;
-    margin: 0;
+    @include title;
   }
   
   p {
-    color: $txt-color;
-    font-size: 16px;
-    font-weight: 400;
+    @include text;
   }
 
   .banner-img {
@@ -63,55 +53,23 @@ header {
   }
 
   #search-input {
-    width: 50%;
-    height: 44px;
-    padding: 0 16px;
-    margin: 16px 0;
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    font-size: 14px;
-    background-color: $txt-color; 
+    @include searchbar;
   }
 
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
-    column-gap: 24px;
-    row-gap: 24px;
-    margin: 24px 0;
-    justify-content: center;
+    @include card-container;
   }
   
   .card {
-    background-color: $card-background;
-    border-radius: 12px;
-    padding: 24px;
-    row-gap: 16px;
+    @include card;
   }
   
   .card-img {
-    width: 100%;
-    height: 350px;
-    border-radius: 12px;
+    @include event-img;
   }
   
   .card-content {
-    .event-name {
-      margin-bottom: 16px;
-      color: $txt-color;
-      font-size: 20px;
-      font-weight: 600;
-    }
-  }
-  
-  .event-info {
-    margin: 16px 0;
-  }
-  
-  .event-details {
-    margin: 0;
-    font-weight: 400;
+    @include event-info;
   }
   
   .btn {
@@ -123,176 +81,76 @@ header {
   }
 
   .faq-container {
-    background-color: $background-color;
-    border-radius: 16px;
+    @include faq-container;
   }
   
   .faq-item {
-    background-color: $card-background;
-    padding: 16px 24px;
-    margin: 16px 0;
-    border-radius: 12px;
+    @include faq-item;
   }
   
   .faq-question {
-    padding: 0;
-    margin: 0;
-  
-    .faq {
-      margin: 0;
-      padding: 0;
-      font-weight: 600;
-      color: $txt-color;
-      font-size: 16px;
-    }
+    @include faq-question;
   }
   
   .faq-answer {
-    padding: 4px 0;
-    color: $txt-color;
-    font-weight: 400;
+    @include faq-answer;
   }
 
   #redirect-contact {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #redirect-contact p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
+    @include redirect-contact;
   }
 
-  /* estilo de formulario de contacto */
-  fieldset {
-    border: none;
-    background-color: $card-background;
-    padding: 24px 32px;
-    margin-top: 32px;
-    border-radius: 24px;
+
+/* estilo de formulario de contacto */
+
+  .contact-form {
+    @include contact-form;
   }
 
-  .contact-container {
-    display: flexbox;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   label {
-    display: block;
-    width: 100%;
-    padding: 0;
-    font-size: 14px;
-    font-weight: 600;
+    @include label;
   }
   
   .form-input {
-    width: 100%;
-    height: 44px;
-    padding: 0 16px;
-    margin: 8px 0 16px 0; 
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    font-size: 14px;
+    @include input-field;
   }
   
   #msg-field {
-    padding-top: 16px;
-    height: 120px;
+    @include msg-field;
   }
 
-  /* estilos de footer */
-  footer {
-    background-color: black;
-    width: 100%;
-    position: static;
-    bottom: 0;
-    padding-top: 16px;
-  }
+
+/* estilos de footer */
+
+footer {
+  @include footer;
+}
   
-  .txt-footer {
-    font-weight: 300;
-    font-size: 14px;
-    color: $txt-color;
-    text-align: center;
-    line-height: 14px;
-  }
 
-  /* estilos de grid */
+/* estilos de grid */
 
-  .grid-container{
-    background-color: $background-color;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 24px;
-    row-gap: 32px;
-    grid-template-rows: repeat(3 auto);
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
+.grid-container{
+  @include grid-layout;
 }
 
 .header{
-    grid-area: header;
-    grid-column: 1 / 13;
-    grid-row: 1 / 1;
+  grid-area: header;
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
 }
 
 .main{
-    grid-area: main;
-    grid-column: 2 / 12;
-    grid-row: 2 / 2;
+  grid-area: main;
+  grid-column: 2 / 12;
+  grid-row: 2 / 3;
 }
 
 .footer{
-    grid-area: footer;
-    grid-column: 1 / 13;
-    grid-row: 3 / 3;
+  grid-area: footer;
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
 }
 
-/* estilos bootstrap */
-
-.bg-nav{
-    background-color: $background-color;
-    box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.25);
-}
-
-.logo-txt{
-    color: $txt-color;
-    font-size: 24px;
-    font-weight: 800;
-}
-
-.logo-txt:hover{
-    color: $hover-color;
-}
-
-.menu-link{
-    color: $txt-color;
-    text-transform: uppercase;
-}
-
-.menu-link:hover{
-    color: $hover-color;
-    font-weight: 600;
-}
-
-.menu-link-active{
-    color: $accent-color;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.menu-link-active:hover{
-    color: $accent-color;
-    font-weight: 600;  
-}
 
 /* media queries */
 

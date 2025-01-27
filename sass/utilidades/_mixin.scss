@@ -1,28 +1,236 @@
-@mixin btn-styles {
-    width: 100%;
-    height: 44px;
-    background-color: $accent-color; 
-    outline: none;
-    border: none;
-    border-radius: 12px;
-    color: $txt-dark;
-    font-weight: bold;
-    text-transform: uppercase;
-  
-    &:hover {
-      background-color: $hover-color;
-      color: $txt-dark;
-    }
-  }
+@mixin nav{
+  display: inline-flex;
+  margin: 0 16px 0 0;
+  align-items: space-between;
+  background-color: $background-color;
+  box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.25);
+  width: 100%;
+}
 
-  @mixin link-styles{
-    color: $accent-color;
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 8px;
-    line-height: 16px;
-  
-    &:hover {
-      color: $hover-color;
-    }
+
+@mixin logo{
+  color: $txt-color;
+  font-size: 24px;
+  font-weight: 800;
+
+  &:hover {
+    color: $hover-color;
   }
+}
+
+@mixin menu-links{
+  color: $txt-color;
+  text-transform: uppercase;
+  
+  &:hover {
+    color: $hover-color;
+    font-weight: 600;
+  }
+}
+
+@mixin btn-styles {
+  width: 100%;
+  height: 44px;
+  background-color: $accent-color; 
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  color: $txt-dark;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  &:hover {
+    background-color: $hover-color;
+    color: $txt-dark;
+  }
+}
+
+@mixin link-styles{
+  color: $accent-color;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+  line-height: 16px;
+  
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+@mixin main{
+  background-color: $background-color;
+}
+
+@mixin title{
+  text-transform: uppercase;
+  color: $txt-color;
+  font-weight: 800;
+  font-size: 32px;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+@mixin text{
+  color: $txt-color;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin searchbar{
+  width: 50%;
+  height: 44px;
+  padding: 0 16px;
+  margin: 16px 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background-color: $txt-color; 
+}
+
+@mixin card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  margin: 24px 0;
+  justify-content: center;
+}
+
+@mixin card{
+  background-color: $card-background;
+  border-radius: 12px;
+  padding: 24px;
+  row-gap: 16px;
+}
+
+@mixin event-img{
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+}
+
+@mixin event-info{
+  .event-name {
+    margin-bottom: 16px;
+    color: $txt-color;
+    font-size: 20px;
+    font-weight: 600;
+  }
+    
+  .event-info {
+    margin: 16px 0;
+  }
+    
+  .event-details {
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+@mixin faq-container{
+  background-color: $background-color;
+  border-radius: 16px;
+}
+
+@mixin faq-item{
+  background-color: $card-background;
+  padding: 16px 24px;
+  margin: 16px 0;
+  border-radius: 12px;
+}
+
+@mixin faq-question{
+  padding: 0;
+  margin: 0;
+
+  .faq {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: $txt-color;
+    font-size: 16px;
+  }
+}
+
+@mixin faq-answer{
+  padding: 4px 0;
+  color: $txt-color;
+  font-weight: 400;
+}
+
+@mixin redirect-contact{
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@mixin contact-form{
+  border: none;
+  background-color: $card-background;
+  padding: 24px 32px;
+  border-radius: 24px;
+}
+
+@mixin label{
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@mixin input-field{
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  margin: 8px 0 16px 0; 
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+@mixin msg-field{
+  padding-top: 16px;
+  min-height: 120px;
+}
+
+@mixin footer{
+  background-color: black;
+  width: 100%;
+  position: static;
+  bottom: 0;
+  padding-top: 16px;
+
+  .txt-footer{
+    font-weight: 300;
+    font-size: 14px;
+    color: $txt-color;
+    text-align: center;
+    line-height: 14px;
+  }
+}
+
+@mixin grid-layout{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  row-gap: 32px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+      "header"
+      "main"
+      "footer";
+}
+
+
+  
