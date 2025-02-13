@@ -206,7 +206,8 @@
 @mixin footer{
   background-color: black;
   width: 100%;
-  position: static;
+  height: 44px;
+  position: fixed;
   bottom: 0;
   padding-top: 16px;
 
@@ -222,15 +223,13 @@
 @mixin grid-layout{
   display: grid;
   justify-content: center;
+  min-width: 100vh;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 24px;
   row-gap: 32px;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 56px auto 44px;
   grid-template-areas:
       "header"
       "main"
       "footer";
 }
-
-
-  
