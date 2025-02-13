@@ -223,7 +223,7 @@
 @mixin grid-layout{
   display: grid;
   justify-content: center;
-  min-width: 100vh;
+  min-height: 100vh;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 24px;
   row-gap: 32px;
