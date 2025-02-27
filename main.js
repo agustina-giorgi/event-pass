@@ -89,11 +89,11 @@ for (let i = 0; i < btn.length; i++) {
           let selectedNumber = parseInt(options);
       
           // Verifica si es un número válido y está dentro de las opciones disponibles (1 o 2)
-          if (isNaN(selectedNumber) || selectedNumber === 1 || selectedNumber === 2) {
+          if (isNaN(selectedNumber) || selectedNumber < 1 || selectedNumber > 2) {
             alert("La opción ingresada no es válida. Por favor, selecciona 1 o 2.");
           } else {
             tktType = selectedNumber; 
-            let confirmacion = confirm(`Has seleccionado Entrada ${selectedNumber === 1 ? 'General' : 'VIP'}. Si es correcto, selecciona OK para finalizar tu compra.`);
+            let confirmacion = confirm(`Has seleccionado Entrada ${selectedNumber === 1 ? 'General' : 'VIP'}. Si es correcto, selecciona OK para seleccionar la cantidad de entradas que deseas adquirir.`);
             if (confirmacion) {
               return askTktAmount(); 
             } else {
@@ -126,7 +126,7 @@ for (let i = 0; i < btn.length; i++) {
     //       } else {
     //         numberOfTkts = amount;
     //         let total = calcTotal(numberOfTkts);
-    //         let confirmation = confirm(`Vas a comprar ${numberOfTkts} entradas. El total es de $${total}. ¿Es correcto?`);
+    //         let confirmation = confirm(`Vas a comprar ${numberOfTkts} entradas. El total es de $${total}. Si es correcto, selecciona OK  para finalizar tu compra.`);
     //         if (confirmation) {
     //           alert('Haz finalizado tu compra con éxito!');
     //         } else if (cancel = true) {
