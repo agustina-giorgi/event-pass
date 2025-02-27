@@ -130,7 +130,7 @@ for (let i = 0; i < btn.length; i++) {
     //         if (confirmation) {
     //           alert('Haz finalizado tu compra con éxito!');
     //         } else if (cancel = true) {
-    //           return; // Termina la función y cierra el modal
+    //           return; // Cierra el modal
     //         } else {
     //           askTktAmount(); // Vuelve a pedir la cantidad si el usuario cancela la confirmación
     //         }
@@ -138,7 +138,7 @@ for (let i = 0; i < btn.length; i++) {
     //     }
     //   }
   
-    //   function calcTotal(amount) {
+    //   function calcTotal(amount) { // calcula el total segun las entradas que el usuario quiera comprar y el tipo de entrada (VIP o General)
     //     let total = 0;
     //     if (tktType === 1) {
     //       total = amount * 15000;
